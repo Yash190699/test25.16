@@ -14,6 +14,7 @@ view: order_items {
   }
   dimension: order_id {
     type: number
+   # label: "@{Test}" test for constants
     # hidden: yes
     sql: ${TABLE}.order_id ;;
   }
