@@ -24,7 +24,6 @@ explore: billion_orders {
     relationship: many_to_one
   }
 }
- explore: derived_table {}
 explore: bud {}
 
 explore: budget {}
