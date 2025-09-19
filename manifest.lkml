@@ -17,6 +17,7 @@ remote_dependency: public_project {
     value: "importing_project_connection"
   }
 }
+
 # # Use local_dependency: To enable referencing of another project
 # # on this instance with include: statements
 #

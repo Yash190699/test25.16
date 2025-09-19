@@ -2,7 +2,8 @@ connection: "thelook"
 
 # include all the views
 include: "/views/**/*.view.lkml"
-
+#include: "//public_project/views/order_items.view.lkml"
+include: "//public_project/derived_table.view.lkml"
 datagroup: new_test_yj_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
@@ -23,7 +24,7 @@ explore: billion_orders {
     relationship: many_to_one
   }
 }
-
+ explore: derived_table {}
 explore: bud {}
 
 explore: budget {}
