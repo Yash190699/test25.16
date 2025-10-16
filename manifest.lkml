@@ -16,6 +16,9 @@ remote_dependency: public_project {
   override_constant: connection {
     value: "importing_project_connection"
   }
+  override_constant: field_label {
+    value: "Latest_brands"
+}
 }
 
 # # Use local_dependency: To enable referencing of another project
