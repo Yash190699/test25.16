@@ -148,6 +148,21 @@ explore: orders {
 }
 
 explore: order_items {
+  always_filter: {
+    filters: {
+      field : id
+      value:  "123,124,125,126,100,105"
+    }
+    filters:  {
+      field: products.category
+      value: "-EMPTY,Maternity, Jumpsuits & Rompers "
+    }
+    filters: {
+      field: orders.status
+      value: "completed"
+    }
+  }
+
   join: orders {
     type: left_outer
     sql_on: ${order_items.order_id} = ${orders.id} ;;
@@ -171,7 +186,7 @@ explore: order_items {
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
     relationship: many_to_one
   }
-}
+ }
 
 explore: order_items_vijaya {
   join: orders {
